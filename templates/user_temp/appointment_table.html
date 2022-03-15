@@ -1,0 +1,54 @@
+{% extends 'user_temp/user_home.html' %}
+{% block content %}
+<div class="card mb-4">
+    <div class="card-header">
+
+    </div>
+    <div class="card-body">
+
+<body>
+<table class="table">
+    <thead class="thead-dark">
+    <tbody>
+<tr>
+
+        <th>user</th>
+        <th>schedule</th>
+        <th>status</th>
+        <th>vaccine_name</th>
+        <th>vaccinated</th>
+
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        {% for l in skey %}
+
+        <td>{{l.user}}</td>
+        <td>{{l.schedule}}</td>
+        <td>{{l.status}}</td>
+        <td>{{l.vaccine_name}}</td>
+        <td>{{l.vaccinated}}</td>
+
+
+
+
+
+</tr>
+
+
+
+
+{% endfor %}
+
+    </tbody>
+</table>
+
+</body>
+    </div>
+</div>
+</html>
+{% endblock %}

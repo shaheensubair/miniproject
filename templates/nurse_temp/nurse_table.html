@@ -1,0 +1,54 @@
+{% extends 'admin_temp/admin_home.html' %}
+{% block content %}
+<div class="card mb-4">
+    <div class="card-header">
+
+    </div>
+    <div class="card-body">
+
+<body>
+<table class="table">
+    <thead class="thead-dark">
+    <tbody>
+<tr>
+        <th>name</th>
+        <th>contact_no</th>
+        <th>address</th>
+        <th>email</th>
+        <th>Hospital</th>
+
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        {% for l in nursedatakey %}
+
+        <td>{{l.name}}</td>
+        <td>{{l.contact_no}}</td>
+        <td>{{l.address}}</td>
+        <td>{{l.email}}</td>
+        <td>{{l.Hospital}}</td>
+        <td> <a href="{% url 'nursedel' l.id %}" > <input type="submit" value="delete"> </a>
+        </td>
+        <td> <a href="{% url 'n_update' l.id %}" > <input type="submit" value="update"> </a>
+        </td>
+
+
+</tr>
+
+
+
+
+{% endfor %}
+
+    </tbody>
+</table>
+
+</body>
+    </div>
+</div>
+</html>
+{% endblock %}

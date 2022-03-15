@@ -1,0 +1,40 @@
+{% extends 'user_temp/user_home.html' %}
+{% block content %}
+
+                                <div class="col-lg-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <div class="card-body">
+                                        <form method="POST">
+                                            <div class="form-group">
+                                                <label class="form-control-label">user</label>
+                                                <input class="form-control" readonly value="{{s.user}}">
+
+                                            </div><div class="form-group">
+                                                <label class="form-control-label">schedule</label>
+                                                <input class="form-control" readonly value="{{s.schedule}}">
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-control-label">status</label>
+                                                <input class="form-control" readonly value="{{s.status}}">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-control-label">vaccine_name</label>
+                                                <input class="form-control" readonly value="{{s.vaccine_name}}">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-control-label">vaccinated</label>
+                                                <input class="form-control" readonly value="{{s.vaccinated}}">
+                                                <button type="submit" class="btn btn-primary mr-2">submit</button>
+                                                <button class="btn btn-light">cancel</button>
+                                            </div>
+                                        </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+{% endblock %}

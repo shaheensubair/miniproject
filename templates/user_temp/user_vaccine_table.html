@@ -1,0 +1,50 @@
+{% extends 'user_temp/user_home.html' %}
+{% block content %}
+<div class="card mb-4">
+    <div class="card-header">
+
+    </div>
+    <div class="card-body">
+
+<body>
+<table class="table">
+    <thead class="thead-dark">
+    <tbody>
+<tr>
+
+        <th>vaccine_name</th>
+        <th>vaccine_type</th>
+        <th>description</th>
+        <th>approval_status</th>
+
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        {% for l in user_vaccinekey %}
+
+        <td>{{l.vaccine_name}}</td>
+        <td>{{l.vaccine_type}}</td>
+        <td>{{l.description}}</td>
+        <td>{{l.approval_status}}</td>
+
+
+
+</tr>
+
+
+
+
+{% endfor %}
+
+    </tbody>
+</table>
+
+</body>
+    </div>
+</div>
+</html>
+{% endblock %}

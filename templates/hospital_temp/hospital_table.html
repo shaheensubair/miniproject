@@ -1,0 +1,49 @@
+{% extends 'admin_temp/admin_home.html' %}
+{% block content %}
+
+
+<div class="card mb-4">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+
+
+
+<body>
+<table class="table">
+
+    <thead class="thead-dark">
+    </tbody>
+
+    <tr>
+        <th>name</th>
+        <th>place</th>
+        <th>contact_no</th>
+        <th>email</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+
+    {% for l in hospitaldatakey %}
+
+        <td>{{l.name}}</td>
+        <td>{{l.place}}</td>
+        <td>{{l.contact_no}}</td>
+        <td>{{l.email}}</td>
+         <td> <a href="{% url 'hospitaldel' l.id %}" > <input type="submit" value="delete"> </a>
+        </td>
+         <td> <a href="{% url 'h_update' l.id %}"> <input type="submit" value="update"> </a>
+
+        </td>
+
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </body>
+    </div>
+    </div>
+{% endblock %}

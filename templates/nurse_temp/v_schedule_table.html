@@ -1,0 +1,54 @@
+{% extends 'admin_temp/admin_home.html' %}
+{% block content %}
+<div class="card mb-4">
+    <div class="card-header">
+
+    </div>
+    <div class="card-body">
+
+<body>
+<table class="table">
+    <thead class="thead-dark">
+    <tbody>
+<tr>
+
+        <th>Hospital</th>
+        <th>date</th>
+        <th>start_time</th>
+        <th>end_time</th>
+
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        {% for l in scheduledatakey %}
+
+        <td>{{l.Hospital}}</td>
+        <td>{{l.date}}</td>
+        <td>{{l.start_time}}</td>
+        <td>{{l.end_time}}</td>
+
+        <td> <a href="{% url 'v_scheduledel' l.id %}" > <input type="submit" value="delete"> </a>
+        </td>
+        <td> <a href="{% url 'v_scheduleupdate' l.id %}" > <input type="submit" value="update"> </a>
+        </td>
+
+
+</tr>
+
+
+
+
+{% endfor %}
+
+    </tbody>
+</table>
+
+</body>
+    </div>
+</div>
+</html>
+{% endblock %}

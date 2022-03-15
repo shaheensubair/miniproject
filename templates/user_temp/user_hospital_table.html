@@ -1,0 +1,45 @@
+{% extends 'user_temp/user_home.html' %}
+{% block content %}
+
+
+<div class="card mb-4">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+
+
+
+<body>
+<table class="table">
+
+    <thead class="thead-dark">
+    </tbody>
+
+    <tr>
+        <th>name</th>
+        <th>place</th>
+        <th>contact_no</th>
+        <th>email</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+
+
+    {% for l in user_hospitalkey %}
+
+        <td>{{l.name}}</td>
+        <td>{{l.place}}</td>
+        <td>{{l.contact_no}}</td>
+        <td>{{l.email}}</td>
+
+
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </body>
+    </div>
+    </div>
+{% endblock %}

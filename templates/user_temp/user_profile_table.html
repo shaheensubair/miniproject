@@ -1,0 +1,58 @@
+{% extends 'user_temp/user_home.html' %}
+{% block content %}
+<div class="card mb-4">
+    <div class="card-header">
+
+    </div>
+    <div class="card-body">
+
+<body>
+<table class="table">
+    <thead class="thead-dark">
+    <tbody>
+<tr>
+
+        <th>name</th>
+        <th>contact_no</th>
+        <th>address</th>
+        <th>child_name</th>
+        <th>child_age</th>
+        <th>child_gender</th>
+        <th>recent_vaccinations</th>
+
+
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        {% for l in user_profilekey %}
+
+        <td>{{l.name}}</td>
+        <td>{{l.contact_no}}</td>
+        <td>{{l.address}}</td>
+        <td>{{l.child_name}}</td>
+        <td>{{l.child_age}}</td>
+        <td>{{l.child_gender}}</td>
+        <td>{{l.recent_vaccinations}}</td>
+
+
+
+
+
+</tr>
+
+
+
+
+{% endfor %}
+
+    </tbody>
+</table>
+
+</body>
+    </div>
+</div>
+</html>
+{% endblock %}
